@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feathern - Roblox Mod Engine</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: white;
+        }
+        
+        .logo-container {
+            width: 200px;
+            height: 200px;
+            margin: 2rem 0;
+            background: white;
+            border-radius: 50%;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin: 1rem 0;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .button {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .discord {
+            background: #7289DA;
+            color: white;
+        }
+        
+        .download {
+            background: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <svg viewBox="0 0 100 100" width="160" height="160">
+            <path d="M50 10 L90 90 L50 70 L10 90 Z" 
+                  fill="none" 
+                  stroke="#16213e" 
+                  stroke-width="4"
+                  stroke-linejoin="round"/>
+            <path d="M50 15 L80 80 L50 65 L20 80 Z" 
+                  fill="#16213e"/>
+        </svg>
+    </div>
+    <h1>Feathern</h1>
+    <div class="buttons">
+        <a href="https://discord.gg/Vy2GYFDf" class="button discord" target="_blank">Discord</a>
+        <a href="https://www.mediafire.com/file/whfwy4lqtr0svlg/Feathern.zip/file" class="button download" target="_blank">Download</a>
+    </div>
+    <script>
+        // Background music
+        const audio = new Audio();
+        audio.src = 'https://www.youtube.com/watch?v=9madxa49jiE&list=PLMt0GJBUMI95jDnPOjun-h1fcfZFDUrz-';
+        audio.loop = true;
+        
+        // Play audio on user interaction
+        document.addEventListener('click', () => {
+            audio.play().catch(console.error);
+        }, { once: true });
+    </script>
+</body>
+</html>
